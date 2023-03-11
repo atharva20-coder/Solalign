@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/idLLEdt"
+            android:weightSum="5">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter City Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@android:color/transparent"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/white"
+                    android:textColorHint="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/cityInputEditText"
+                            android:layout_width="315dp"
+                            android:layout_height="wrap_content"
+                            android:importantForAutofill="no"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:background="@android:color/transparent"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/searchIconImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: "
+            android:layout_margin="16dp"
+            android:layout_below="@+id/idLLEdt"/>
+
+        <TextView
+            android:id="@+id/angleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle: "
+            android:layout_margin="16dp"
+            android:layout_below="@+id/locationTextView"/>
+
+
+</RelativeLayout>
