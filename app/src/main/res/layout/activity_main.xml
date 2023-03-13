@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@drawable/gradient_background"
+    android:fitsSystemWindows="true" >
 
 
         <TextView
@@ -42,12 +43,12 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/cityInputEditText"
-                            android:layout_width="315dp"
+                            android:layout_width="317dp"
                             android:layout_height="wrap_content"
                             android:importantForAutofill="no"
                             android:singleLine="true"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:background="@android:color/transparent"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -57,8 +58,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"
                     android:layout_margin="10dp"
+                    android:layout_weight="0.5"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_search"
                     app:tint="@color/white" />
@@ -68,19 +69,23 @@
             android:id="@+id/locationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location: "
-            android:gravity="center_horizontal"
+            android:layout_below="@+id/idLLEdt"
             android:layout_margin="16dp"
-            android:layout_below="@+id/idLLEdt"/>
+            android:gravity="center_horizontal"
+            android:text="Location: "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/angleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Angle: "
-            android:gravity="center_horizontal"
+            android:layout_below="@+id/locationTextView"
             android:layout_margin="16dp"
-            android:layout_below="@+id/locationTextView"/>
+            android:gravity="center_horizontal"
+            android:text="Optimal Tilt Angle: "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_share"
@@ -91,7 +96,10 @@
             android:layout_marginRight="9dp"
             android:layout_marginBottom="6dp"
             android:drawableRight="@drawable/ic_share"
-            android:text="Share" />
+            android:text="Share"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
 
         <Button
             android:id="@+id/btn_documentation"
@@ -102,15 +110,18 @@
             android:layout_marginStart="9dp"
             android:layout_marginBottom="6dp"
             android:drawableRight="@drawable/ic_help"
-            android:text="Help" />
+            android:text="Refrence"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
 
         <ImageView
             android:id="@+id/solarView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="205dp"
+            android:layout_height="198dp"
             android:layout_below="@+id/angleTextView"
             android:layout_centerInParent="true"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="85dp"
             app:srcCompat="@drawable/solar" />
 
 

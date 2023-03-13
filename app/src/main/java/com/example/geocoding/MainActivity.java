@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     String panelAngle;
 
-    String cityName="Try opening Maps";
+    String cityName="Turn On \uD83D\uDCCD\n";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +59,11 @@ public class MainActivity extends AppCompatActivity {
         checkLocationPermission();
         getUserLocation();
 
+
         searchIconImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String locationName = cityInputEditText.getText().toString();
-                cityName = locationName;
-                cityTV.setText(cityName);
 
                 if (locationName.isEmpty()) {
                     new AlertDialog.Builder(MainActivity.this)
